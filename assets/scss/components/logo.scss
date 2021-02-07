@@ -1,0 +1,39 @@
+.logo {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: 1s;
+
+  @media (max-width: $breakSmall) {
+    width: 120px;
+    height: 120px;
+  }
+
+  svg {
+    position: relative;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.logo.banner {
+  height: 150vw;
+  width: 150vw;
+  border-radius: 50%;
+
+  svg {
+    position: relative;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

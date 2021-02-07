@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Sacramento&display=swap&subset=latin-ext");
+
+@import "variables";
+@import './components/logo';
+@import './components/menu';
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url("~assets/img/bg.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, $pink);
+  border-radius: 10px;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 30vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+.hero {
+  height: 100vh;
+  display: flex;
+
+  a {
+    text-decoration: none;
+    position: relative;
+  }
+
+  @media (max-width: $breakSmall) {
+    flex-direction: column;
+    height: 97vh;
+  }
+}
+
+
+.img-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+
+  @media (max-width: $breakSmall) {
+    width: 100%;
+  }
+}
+
+.cafe {
+  background: url("~assets/img/kawiarnia.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.playhouse {
+  background: url("~assets/img/bawialnia.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.hovered {
+  background-size: 105%;
+}
+
+.title {
+  background-color: rgba(200, 112, 113, 0.8);
+  font-family: "Poppins", sans-serif;
+  padding: 20px 40px;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  position: relative;
+  top: 65vh;
+  font-size: 32px;
+  color: white;
+  border-radius: 20px;
+
+  a {
+    color: white;
+  }
+
+  @media (max-width: $breakSmall) {
+    top: 60%;
+    left: 50%;
+    width: 70%;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}
+
+
+
+
+
+
+
+
+.shop {
+  z-index: 10;
+  position: absolute;
+  top: 10%;
+  right: -100%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 32px;
+  animation: shopAnimation linear 2s 3s both;
+
+  @media (max-width: $breakSmall) {
+    width: 100px;
+    height: 100px;
+
+    .fz50 {
+      font-size: 24px;
+    }
+  }
+
+  .gilifont {
+    font-size: 50px;
+
+    @media (max-width: $breakSmall) {
+      font-size: 20px;
+    }
+  }
+
+  .circle:nth-child(1) {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $pink;
+
+    @media (max-width: $breakSmall) {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  .circle:nth-child(2) {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $darkRed;
+
+    @media (max-width: $breakSmall) {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  .circle:nth-child(3) {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $mustard;
+
+    @media (max-width: $breakSmall) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
