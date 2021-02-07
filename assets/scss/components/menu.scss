@@ -1,8 +1,9 @@
 // menu
+
 .menu {
   position: fixed;
   top: 2%;
-  left: 2%;
+  right: 2%;
   z-index: 3;
   cursor: pointer;
 }
@@ -78,7 +79,7 @@
   &-link {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 24px;
     color: $darkRed;
     opacity: 1;
   }

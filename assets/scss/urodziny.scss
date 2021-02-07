@@ -1,0 +1,45 @@
+
+//cards
+.wrapper {
+  padding-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    flex: 1 1 300px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+    @media (max-width: $breakSmall) {
+      margin: 20px 0;
+    }
+
+    &:nth-child(1) {
+      background-color: $pink;
+      .cardContent {
+        color: $darkRed;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $mustard;
+      .cardContent {
+        color: $darkRed;
+      }
+    }
+    &:nth-child(3) {
+      background-color: $darkRed;
+      .cardContent {
+        color: $pink;
+      }
+    }
+    .cardTitle {
+      color: white;
+      font-weight: 200;
+    }
+    .cardContent {
+      text-align: left;
+      padding: 30px;
+    }
+  }
+}
+//end cards

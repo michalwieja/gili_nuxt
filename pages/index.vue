@@ -1,8 +1,6 @@
 <template>
   <div class="container">
     <Logo/>
-    <Shop/>
-    <Menu/>
     <div class="hero">
       <div class="img-container cafe">
         <div class="title">

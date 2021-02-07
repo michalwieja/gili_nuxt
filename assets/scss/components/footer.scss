@@ -1,0 +1,19 @@
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .copy {
+    @media (max-width: $breakSmall) {
+      font-size: 12px;
+    }
+  }
+
+  .socials {
+    a {
+      text-decoration: none;
+      color: #222;
+    }
+  }
+}

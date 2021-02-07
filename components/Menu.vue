@@ -7,13 +7,11 @@
     </div>
     <nav :class="{navActive}" class="nav">
       <ul class="nav-links">
-        <li><a href="#about" class="nav-link">bawialnia</a></li>
-        <li><a href="#birthday" class="nav-link">urodziny</a></li>
-        <li><a href="#activities" class="nav-link">warsztaty</a></li>
-        <li><a href="#cafe" class="nav-link">kawiarnia</a></li>
-        <li><a href="#gallery" class="nav-link">galeria</a></li>
-        <li><a href="#contact" class="nav-link">kontakt</a></li>
-        <li><a href="https://sklep.giligili.pl" class="nav-link ">sklep</a></li>
+        <li v-for="(link,index) in links" :key="index"@click="onLinkClick">
+          <NuxtLink  :to="link" class="nav-link">{{ link }}</NuxtLink>
+        <li>
+        <a rel="noreferrer noopener" target="_blank" href="https://sklep.giligili.pl" class="nav-link ">sklep</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -26,10 +24,16 @@ export default {
     return {
       menuActive: false,
       navActive: false,
+      links: ['bawialnia', 'urodziny', 'warsztaty', 'kawiarnia', 'galeria', 'kontakt']
     }
   },
   methods: {
     onClick() {
+      this.navActive = !this.navActive;
+      this.menuActive = !this.menuActive
+    },
+    onLinkClick() {
+      console.log('ok')
       this.navActive = !this.navActive;
       this.menuActive = !this.menuActive
     }
